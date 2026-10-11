@@ -1,25 +1,90 @@
 {
   "expo": {
     "name": "LifeOS",
-    "slug": "LifeOS",
-    "version": "1.0.0",
+    "slug": "lifeos",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0F0F0F",
+    "newArchEnabled": true,
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lifeos.app"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#0F0F0F"
       },
-      "predictiveBackGestureEnabled": false
+      "package": "com.lifeos.app",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0F0F0F",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#6C63FF",
+          "sounds": []
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "LifeOS needs microphone to understand your voice messages."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "LifeOS needs photo access to analyze your food calories.",
+          "cameraPermission": "LifeOS needs camera to take food photos."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "LifeOS uses Face ID / fingerprint to protect your data."
+        }
+      ]
+    ],
+    "scheme": "lifeos",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a958fbd6-4ec6-4b66-9b5a-9e82b07c8aa5"
+      }
     }
   }
 }
