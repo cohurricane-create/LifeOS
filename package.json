@@ -1,6 +1,10 @@
 {
   "name": "lifeos",
   "version": "2.0.0",
+  "description": "Offline-first personal life operating system mobile app with AI assistant, finance tracker, smart planner, and biometric security.",
+  "author": "Umid Namazov",
+  "license": "MIT",
+  "homepage": "https://github.com/cohurricane-create/LifeOS",
   "main": "expo-router/entry",
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
